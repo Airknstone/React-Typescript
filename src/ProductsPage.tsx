@@ -1,5 +1,6 @@
 import React from 'react';
 import { IProduct, products } from './ProductsData';
+import { Link } from 'react-router-dom';
 
 interface IState {
   products: IProduct[];
@@ -22,7 +23,7 @@ class ProductsPage extends React.Component<{}, IState> {
         <ul className='product-list'>
           {this.state.products.map((product) => (
             <li className='product-list-item' key={product.id}>
-              {product.name}
+              <Link to={`/products/${product.id}`}>{product.name}</Link>
             </li>
           ))}
         </ul>
