@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { NavLink, Route, RouteComponentProps } from 'react-router-dom';
 
